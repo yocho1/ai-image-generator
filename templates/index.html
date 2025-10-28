@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AI Image Generator</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🎨 AI Image Generator</h1>
+    <input type="text" id="prompt" placeholder="Describe your image...">
+    <button id="generate-btn">Generate</button>
+    <div id="result"></div>
+  </div>
+
+  <script>
+    const btn = document.getElementById("generate-btn");
+    const result = document.getElementById("result");
+
+    btn.addEventListener("click", async () => {
+      const prompt = document.getElementById("prompt").value.trim();
+      if (!prompt) return alert("Please enter a prompt");
+
+      result.innerHTML = "⏳ Generating image...";
+      const res = await fetch("/generate", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ prompt }),
+      });
+
+      const data = await res.json();
+      if (data.image) {
+        result.innerHTML = `<img src="data:image/png;base64,${data.image}" alt="Generated Image"/>`;
+      } else {
+        result.innerHTML = `❌ Error: ${data.error}`;
+      }
+    });
+  </script>
+</body>
+</html>

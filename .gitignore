@@ -1,0 +1,138 @@
+# -----------------------------
+# 🐍 Python
+# -----------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+*.pdb
+*.so
+*.dll
+
+# Virtual environments
+venv/
+Venv/
+env/
+ENV/
+.venv/
+
+# Distribution / packaging
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# PyInstaller
+# Usually creates these folders and files
+*.manifest
+*.spec
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# -----------------------------
+# 🧰 IDE / Editor
+# -----------------------------
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# -----------------------------
+# 🧪 Environment & Credentials
+# -----------------------------
+.env
+.env.*
+*.env
+.env.local
+*.key
+*.pem
+
+# -----------------------------
+# 📦 Logs & Temp
+# -----------------------------
+*.log
+logs/
+tmp/
+temp/
+*.bak
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# -----------------------------
+# 🧑‍💻 Node / Frontend (if any static UI)
+# -----------------------------
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+
+# -----------------------------
+# ⚙️ Flask Specific
+# -----------------------------
+instance/
+*.db
+*.sqlite3
+*.sqlite
+__debugger__/
+flask_session/
+
+# -----------------------------
+# 🧠 Gemini / AI Generated files
+# -----------------------------
+*.jsonl
+*.ckpt
+*.pt
+*.weights
+*.onnx
+
+# -----------------------------
+# 🖼️ Static & Media
+# -----------------------------
+/static/uploads/
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.svg
+*.webp
+
+# -----------------------------
+# 🚀 OS Files
+# -----------------------------
+ehthumbs.db
+Icon?
+Desktop.ini
+
+# -----------------------------
+# ⚡ Git backup
+# -----------------------------
+*.orig
+*.rej
+*.bak
+*.tmp
